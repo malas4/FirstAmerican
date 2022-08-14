@@ -1,0 +1,92 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "AssessRecord"
+    ],
+    "properties": {
+        "AssessRecord": {
+            "type": "object",
+            "default": {},
+            "title": "The AssessRecord Schema",
+            "required": [
+                "ID",
+                "Latitude",
+                "Addresses",
+                "Owners"
+            ],
+            "properties": {
+                "ID": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The ID Schema",
+                    "examples": [
+                        "123-111"
+                    ]
+                },
+                "Latitude": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The Latitude Schema",
+                    "examples": [
+                        "33.9183"
+                    ]
+                },
+                "Addresses": {
+                    "type": "array",
+                    "default": [],
+                    "title": "The Addresses Schema",
+                    "items": {},
+                    "examples": [
+                        []
+                    ]
+                },
+                "Owners": {
+                    "type": "array",
+                    "default": [],
+                    "title": "The Owners Schema",
+                    "items": {
+                        "type": "string",
+                        "title": "A Schema",
+                        "examples": [
+                            "HATCH TEST TRUST",
+                            "HATCH JOHN D",
+                            "HATCH SALLY"
+                        ]
+                    },
+                    "examples": [
+                        ["HATCH TEST TRUST",
+                            "HATCH JOHN D",
+                            "HATCH SALLY"
+                        ]
+                    ]
+                }
+            },
+            "examples": [{
+                "ID": "123-111",
+                "Latitude": "33.9183",
+                "Addresses": [],
+                "Owners": [
+                    "HATCH TEST TRUST",
+                    "HATCH JOHN D",
+                    "HATCH SALLY"
+                ]
+            }]
+        }
+    },
+    "examples": [{
+        "AssessRecord": {
+            "ID": "123-111",
+            "Latitude": "33.9183",
+            "Addresses": [],
+            "Owners": [
+                "HATCH TEST TRUST",
+                "HATCH JOHN D",
+                "HATCH SALLY"
+            ]
+        }
+    }]
+}

@@ -1,0 +1,44 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "Buyer",
+        "DocumentType"
+    ],
+    "properties": {
+        "Buyer": {
+            "type": "array",
+            "default": [],
+            "title": "The Buyer Schema",
+            "items": {
+                "type": "string",
+                "default": "",
+                "title": "A Schema",
+                "examples": [
+                    "John Maxwell D"
+                ]
+            },
+            "examples": [
+                [
+                    "John Maxwell D"]
+            ]
+        },
+        "DocumentType": {
+            "type": "string",
+            "default": "",
+            "title": "The DocumentType Schema",
+            "examples": [
+                "Deed"
+            ]
+        }
+    },
+    "examples": [{
+        "Buyer": [
+            "John Maxwell D"
+        ],
+        "DocumentType": "Deed"
+    }]
+}
